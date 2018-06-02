@@ -1,20 +1,13 @@
-module MyModule
-  def say
-    puts 'hello'
-  end
+class Book
+  attr_reader :title, :price
 
-  def self.say
-    puts 'self_hello'
+  def initialize(title, price)
+    @title = title
+    @price = price
   end
 end
 
-class ExtendedClass
-  extend MyModule
-end
-ExtendedClass.say
+book = Book.new('Learning Rails', 2017)
+puts book.title
+puts book.price
 
-extended_class = ExtendedClass.new
-# extended_class.say
-
-extended_class.extend MyModule
-extended_class.say
