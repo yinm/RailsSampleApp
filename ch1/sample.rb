@@ -8,4 +8,9 @@ module MyModule
   end
 end
 
-MyModule.say
+class IncludeClass
+  include MyModule
+end
+
+included_instance = IncludeClass.new
+included_instance.say
