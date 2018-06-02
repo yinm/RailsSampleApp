@@ -1,12 +1,13 @@
-names = ['Alice', 'Bob', 'Charlie']
-
-names.each { |name| puts name }
-
-names.each do |name|
-  puts name
+square = Proc.new do |n|
+  n ** 2
 end
 
-names = names.select do |name|
-  name.start_with?("C")
-end.map { |name| name.upcase }
-puts names
+class Array
+  def iterate!(code)
+    self.map { |n| code.call(n) }
+  end
+end
+
+puts [1, 2, 3].iterate!(square)
+
+puts [4, 5, 6].iterate!(square)
