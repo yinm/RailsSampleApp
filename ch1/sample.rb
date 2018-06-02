@@ -1,2 +1,7 @@
-some_method = proc { |v| puts v }
-[1,2,3].each(&some_method)
+class MyClass
+  def initialize
+    puts 'Init'
+  end
+end
+
+my_instance = MyClass.new
