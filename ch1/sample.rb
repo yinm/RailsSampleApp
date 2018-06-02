@@ -1,7 +1,7 @@
 def method_with_block
-  yield
+  yield 'john'
 end
 
-method_with_block do
-  puts 'foo'
+method_with_block do |name|
+  puts "Hello #{name}!"
 end
