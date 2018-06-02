@@ -1,2 +1,2 @@
-twice = -> (x) { 2 * x }
-p twice.call(3)
+some_method = proc { |v| puts v }
+[1,2,3].each(&some_method)
