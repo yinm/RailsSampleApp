@@ -1,13 +1,5 @@
-square = Proc.new do |n|
-  n ** 2
-end
+proc = Proc.new{ |a, b, c| p "#{a}, #{b}, #{c}" }
+proc.call(1, 2)
 
-class Array
-  def iterate!(code)
-    self.map { |n| code.call(n) }
-  end
-end
-
-puts [1, 2, 3].iterate!(square)
-
-puts [4, 5, 6].iterate!(square)
+lambda1 = lambda{ |a, b, c| p "#{a}, #{b}, #{c}" }
+lambda1.call(1, 2)
