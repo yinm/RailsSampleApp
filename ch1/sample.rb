@@ -1,7 +1,8 @@
-user = {
-  :name => 'symbol_key',
-  "name" => 'string_key',
-}
+name ||= 'taro'
 
-p user['name']
-p user[:name]
+p name
+
+name1 = 'foo'
+name1 ||= 'taro'
+
+p name1
