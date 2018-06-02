@@ -1,13 +1,17 @@
-class Book
-  attr_reader :title, :price
+class Idea
+  attr_reader :title
 
-  def initialize(title, price)
+  def initialize(title)
     @title = title
-    @price = price
   end
 end
 
-book = Book.new('Learning Rails', 2017)
-puts book.title
-puts book.price
+class Book < Idea
+  attr_writer :title
+end
 
+book = Book.new('Learning Rails')
+puts book.title
+
+book.title = 'Learning Rails 2nd Edition'
+puts book.title
