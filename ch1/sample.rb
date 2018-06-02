@@ -8,9 +8,13 @@ module MyModule
   end
 end
 
-class IncludeClass
-  include MyModule
+class ExtendedClass
+  extend MyModule
 end
+ExtendedClass.say
 
-included_instance = IncludeClass.new
-included_instance.say
+extended_class = ExtendedClass.new
+# extended_class.say
+
+extended_class.extend MyModule
+extended_class.say
