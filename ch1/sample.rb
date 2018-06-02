@@ -1,7 +1,12 @@
-def method_with_block
-  yield 'john'
+names = ['Alice', 'Bob', 'Charlie']
+
+names.each { |name| puts name }
+
+names.each do |name|
+  puts name
 end
 
-method_with_block do |name|
-  puts "Hello #{name}!"
-end
+names = names.select do |name|
+  name.start_with?("C")
+end.map { |name| name.upcase }
+puts names
