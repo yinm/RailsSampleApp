@@ -1,8 +1,7 @@
-name ||= 'taro'
+def method_with_block
+  yield
+end
 
-p name
-
-name1 = 'foo'
-name1 ||= 'taro'
-
-p name1
+method_with_block do
+  puts 'foo'
+end
