@@ -1,17 +1,14 @@
-class Idea
-  attr_reader :title
+class MyClass
+  def some_method
+    private_method
+  end
 
-  def initialize(title)
-    @title = title
+  private
+
+  def private_method
+    puts 'private_method'
   end
 end
 
-class Book < Idea
-  attr_writer :title
-end
-
-book = Book.new('Learning Rails')
-puts book.title
-
-book.title = 'Learning Rails 2nd Edition'
-puts book.title
+MyClass.new.some_method
+MyClass.new.private_method
