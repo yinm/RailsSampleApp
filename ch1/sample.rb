@@ -1,7 +1,11 @@
-class MyClass
+class SuperMyClass
   def initialize
-    puts 'Init'
+    @super_variable = 'init'
   end
 end
 
-my_instance = MyClass.new
+class MyClass < SuperMyClass
+end
+
+p SuperMyClass.new
+p MyClass.new
