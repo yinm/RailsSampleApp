@@ -35,8 +35,5 @@ module RailsApp
 
     config.i18n.available_locales = [:en, :ja]
     config.i18n.default_locale = :ja
-
-    # log rotation
-    config.logger = logger.new('log/development.log', 5, 1 * 1024 * 1024)
   end
 end
