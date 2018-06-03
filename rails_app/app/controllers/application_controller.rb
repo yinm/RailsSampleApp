@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   def hello
-    text = 'Hello World!'
-
+    text = "PARAMS: #{params}"
     render plain: text
   end
 end
